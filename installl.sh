@@ -59,6 +59,7 @@ cd ${openrestyDir}/openresty-${VERSION} && ./configure \
 --with-http_slice_module \
 --with-http_stub_status_module \
 --with-http_sub_module \
---with-http_realip_module
+--with-http_realip_module \
+--add-module=/www/server/mdserver-web/source/fastdfs-nginx-module/src
 
 make -j${cpuCore} && make install && make clean
