@@ -4,4 +4,8 @@
 ### 脚本
 ```
 curl -fsSL https://raw.githubusercontent.com/mw-plugin/fastdfs-nginx-module/main/installl.sh | bash
+
+
+
+wget -O install.sh https://raw.githubusercontent.com/mw-plugin/fastdfs-nginx-module/main/installl.sh && bash install.sh
 ```
