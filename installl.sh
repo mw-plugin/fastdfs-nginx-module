@@ -18,9 +18,6 @@ openrestyDir=/www/server/mdserver-web/source/openresty
 mkdir -p ${openrestyDir}
 echo '正在安装脚本文件...' > $install_tmp
 
-if [ ! -f ${openrestyDir}/openresty-${VERSION}.tar.gz ];then
-	wget -O ${openrestyDir}/openresty-${VERSION}.tar.gz https://openresty.org/download/openresty-${VERSION}.tar.gz
-fi
 
 # ----- cpu start ------
 if [ -z "${cpuCore}" ]; then
@@ -47,6 +44,10 @@ else
 fi
 # ----- cpu end ------
 
+if [ ! -f ${openrestyDir}/openresty-${VERSION}.tar.gz ];then
+	wget -O ${openrestyDir}/openresty-${VERSION}.tar.gz https://openresty.org/download/openresty-${VERSION}.tar.gz
+fi
+
 
 cd ${openrestyDir} && tar -zxvf openresty-${VERSION}.tar.gz
 
@@ -69,4 +70,4 @@ service openresty restart
 
 
 # 查看安装信息
-# /www/server/openresty/
+# /www/server/openresty/bin/openresty -V
