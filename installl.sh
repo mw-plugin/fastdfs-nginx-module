@@ -46,6 +46,7 @@ fi
 
 
 rm -rf ${openrestyDir}/openresty-${VERSION}
+rm -rf ${openrestyDir}/openresty-${VERSION}.tar.gz
 
 if [ ! -f ${openrestyDir}/openresty-${VERSION}.tar.gz ];then
 	wget -O ${openrestyDir}/openresty-${VERSION}.tar.gz https://openresty.org/download/openresty-${VERSION}.tar.gz
