@@ -5,6 +5,16 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 mkdir -p /www/server/source
 cd /www/server/source
 
+if [ ! -d /www/server/source/libfastcommon ];then
+	git clone https://github.com/happyfish100/libfastcommon
+fi
+
+if [ ! -d /usr/include/fastcommon ];then
+	cd /www/server/source/libfastcommon
+	./make.sh && ./make.sh install
+fi
+
+
 
 if [ ! -d /www/server/source/fastdfs-nginx-module ];then
 	git clone https://github.com/happyfish100/fastdfs-nginx-module
