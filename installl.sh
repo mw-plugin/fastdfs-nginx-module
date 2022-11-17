@@ -12,7 +12,7 @@ git clone https://github.com/mw-plugin/fastdfs-nginx-module
 VERSION=1.21.4.1
 
 install_tmp=/www/server/mdserver-web/tmp/mw_install.pl
-openrestyDir=/www/server/mdserver-web/source/openresty
+openrestyDir=/www/server/source/openresty
 
 
 mkdir -p ${openrestyDir}
@@ -43,6 +43,7 @@ else
 	cpuCore="1"
 fi
 # ----- cpu end ------
+
 
 if [ ! -f ${openrestyDir}/openresty-${VERSION}.tar.gz ];then
 	wget -O ${openrestyDir}/openresty-${VERSION}.tar.gz https://openresty.org/download/openresty-${VERSION}.tar.gz
