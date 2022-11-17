@@ -51,7 +51,7 @@ fi
 cd ${openrestyDir} && tar -zxvf openresty-${VERSION}.tar.gz
 
 cd ${openrestyDir}/openresty-${VERSION} && ./configure \
---prefix=$serverPath/openresty \
+--prefix=/www/server/openresty \
 --with-ipv6 \
 --with-stream \
 --with-http_v2_module \
@@ -60,9 +60,13 @@ cd ${openrestyDir}/openresty-${VERSION} && ./configure \
 --with-http_stub_status_module \
 --with-http_sub_module \
 --with-http_realip_module \
---add-module=/www/server/mdserver-web/source/fastdfs-nginx-module/src
+--add-module=/www/server/source/fastdfs-nginx-module/src
 
 make -j${cpuCore} && make install && make clean
 
 
 service openresty restart
+
+
+# 查看安装信息
+# /www/server/openresty/
