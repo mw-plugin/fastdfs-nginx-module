@@ -5,7 +5,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 mkdir -p /www/server/source
 cd /www/server/source
 
-git clone https://github.com/mw-plugin/fastdfs-nginx-module
+git clone https://github.com/happyfish100/fastdfs-nginx-module
 
 
 
@@ -56,6 +56,7 @@ fi
 cd ${openrestyDir} && tar -zxvf openresty-${VERSION}.tar.gz
 
 cd ${openrestyDir}/openresty-${VERSION} && ./configure \
+--with-cc-opt=-O2 \
 --prefix=/www/server/openresty \
 --with-ipv6 \
 --with-stream \
