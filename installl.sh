@@ -63,3 +63,6 @@ cd ${openrestyDir}/openresty-${VERSION} && ./configure \
 --add-module=/www/server/mdserver-web/source/fastdfs-nginx-module/src
 
 make -j${cpuCore} && make install && make clean
+
+
+service openresty restart
