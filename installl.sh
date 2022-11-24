@@ -18,6 +18,7 @@ fi
 
 if [ ! -d /www/server/source/fastdfs-nginx-module ];then
 	git clone https://github.com/happyfish100/fastdfs-nginx-module
+	cp -rf fastdfs-nginx-module/src/mod_fastdfs.conf /etc/fdfs/mod_fastdfs.conf
 fi
 
 
